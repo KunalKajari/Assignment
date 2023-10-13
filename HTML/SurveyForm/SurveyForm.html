@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="container">
+    <header>Customer Form</header>
+
+    <form class="form" id="formSubmission">
+
+      <div class="input-box a1">
+        <label>First Name</label>
+        <input type="text"  id="fname" placeholder="Enter first name" required />
+      </div>
+
+      <div class="input-box a1">
+        <label>Last Name</label>
+        <input type="text" id="lname" placeholder="Enter last name" required />
+      </div>
+
+      <div class="input-box a1">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="Enter email address" required />
+      </div>
+
+      <div class="column">
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="number" id="number" placeholder="Enter phone number" required />
+        </div>
+        <div class="input-box">
+          <label>Birth Date</label>
+          <input type="date" id="bday" placeholder="Enter birth date" required />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender" id="gen">
+              <input type="radio" id="check-male" name="gender" value="Male" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender" id="gen">
+              <input type="radio" id="check-female" name="gender" value="Female" />
+              <label for="check-female">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label>Address</label>
+  
+            <div class="select-box">
+              <select id="add">
+                <option hidden>Country</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>Bangladesh</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+        </div>
+      </div>
+      
+      <label>Profession</label>
+      <textarea cols="95" rows="3" id="desc"class="textArea" placeholder="Descibe Your Profession"></textarea>
+    
+      <div class="column">
+        <button type="button" value="Submit" onclick="submitForm()">Submit</button>
+        <button type="button" value="Reset"  onclick="reset()">Reset</button>
+      </div>
+    </form>
+
+    <div id="popup" style="display: none;">
+      <header style="padding-top: 20px;">Survey Form Data</header>
+      <p style="padding-top: 10px;" id="popupData"></p>
+      <button class="clsbtn" onclick="closeForm()">Close</button>
+    </div>        
+    <script src="script.js"></script>
+  </div>
+
+ 
+</body>
+</html>
